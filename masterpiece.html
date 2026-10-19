@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>unscriptedlife</title>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Header / Navigation -->
+  <header class="text-gray-600 body-font bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+      <a onclick="showTab('home')" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl font-bold tracking-tight">unscriptedlife</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <button onclick="showTab('home')" class="mr-5 hover:text-indigo-600 font-medium transition-colors focus:outline-none">Home</button>
+        <button onclick="showTab('articles')" class="mr-5 hover:text-indigo-600 font-medium transition-colors focus:outline-none">Articles</button>
+        <button onclick="showTab('about')" class="mr-5 hover:text-indigo-600 font-medium transition-colors focus:outline-none">About</button>
+        <button onclick="showTab('subscribe')" class="mr-5 hover:text-indigo-600 font-medium transition-colors focus:outline-none">Subscribe</button>
+      </nav>
+      <button onclick="showTab('subscribe')" class="inline-flex items-center bg-indigo-600 text-white border-0 py-2 px-4 focus:outline-none hover:bg-indigo-700 rounded text-sm font-medium mt-4 md:mt-0 transition-colors">
+        Subscribe
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-grow">
+    
+    <!-- 1. HOME SECTION -->
+    <section id="tab-home" class="tab-content text-gray-600 body-font py-12 md:py-16 bg-white">
+      <div class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center max-w-5xl">
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80" alt="unscriptedlife hero" class="object-cover object-center rounded-2xl shadow-md border border-gray-100 w-full h-80">
+        </div>
+        <div class="lg:flex-grow md:w-1/2 lg:pl-12 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center">
+          <span class="tracking-widest text-xs title-font font-semibold text-indigo-500 uppercase bg-indigo-50 px-3 py-1 rounded-full mb-3">Welcome to unscriptedlife</span>
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-bold text-gray-900 leading-tight">
+            Embrace the Unplanned, Navigating Life Beyond the Script.
+          </h1>
+          <p class="mb-8 leading-relaxed text-gray-600 text-base">
+            A personal space for reflections on growth, wisdom, and the unexpected detours that shape who we are becoming. From quiet insights to honest observations—moving forward step by step.
+          </p>
+          <div class="flex justify-center space-x-4">
+            <button onclick="showTab('articles')" class="inline-flex text-white bg-indigo-600 border-0 py-2.5 px-6 focus:outline-none hover:bg-indigo-700 rounded-lg text-sm font-medium transition-colors shadow-sm">
+              Read Articles
+            </button>
+            <button onclick="showTab('subscribe')" class="inline-flex text-gray-700 bg-gray-100 border-0 py-2.5 px-6 focus:outline-none hover:bg-gray-200 rounded-lg text-sm font-medium transition-colors">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ARTICLES SECTION -->
+    <section id="tab-articles" class="tab-content text-gray-600 body-font py-12 md:py-16 hidden">
+      <div class="container px-5 mx-auto max-w-3xl space-y-12">
+
+        <!-- Article 1 -->
+        <article class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+          <div class="mb-6 text-center">
+            <span class="tracking-widest text-xs title-font font-semibold text-indigo-500 uppercase bg-indigo-50 px-3 py-1 rounded-full">New Topic</span>
+            <h1 class="title-font sm:text-3xl text-2xl font-bold text-gray-900 mt-4 mb-2">The Price of Never Being Directionless</h1>
+            <p class="text-xs text-gray-400">Published on October 19, 2026 • 3 min read</p>
+          </div>
+          <p class="leading-relaxed text-base md:text-lg text-gray-700 text-justify mb-8">We often come across Bill Gates’ famous advice: "Surround yourself with people who challenge you, teach you, and push you to be your best self." On the surface, it sounds like the ultimate formula for success. Surrounding yourself with individuals who raise the bar ensures you rarely stay stagnant. You evolve constantly, adapt rapidly, and maintain a clear sense of direction.However, there is a profound side to this journey that remains largely invisible.When you deliberately place yourself in environments that constantly stretch your limits, growth ceases to be an occasional milestone—it becomes a relentless daily demand. While this pursuit sharpens your mind and refines your vision, it also forces you to continually dismantle old habits, confront personal flaws, and shed former versions of yourself.There is a subtle but significant difference between a broken person and a shattered one.A broken person usually carries a single, recognizable wound—a distinct tear caused by a specific failure or hardship. But a person striving in an environment of constant challenge isn't merely broken; they are frequently shattered. Continuous growth requires you to break yourself down into tiny, fragmenting pieces over and over again to rebuild something stronger. You aren't just mending a single crack; you are constantly piecing together a million fragments of who you used to be while trying to forge who you need to become.What goes unnoticed by the outside world is the quiet emotional toll of this process. To be constantly pushed means living in a state of perpetual friction. The person on this path never stays directionless, but they often carry an invisible weight—the sheer exhaustion of endless self-reconstruction.Surrounding yourself with people who challenge you is invaluable, but true strength isn't just about enduring the push to evolve. It lies in recognizing the immense courage it takes to shatter your comfortable self, over and over, in pursuit of who you are meant to be.  
+        </p>
+          <div class="flex items-center justify-between border-t border-gray-100 pt-6 text-sm text-gray-400">
+            <button onclick="likeArticle(this)" class="inline-flex items-center hover:text-indigo-600 transition-colors focus:outline-none">
+              <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              <span>Likes: <strong class="like-count">2400</strong></span>
+            </button>
+            <button onclick="shareArticle()" class="text-indigo-500 hover:text-indigo-700 font-medium text-sm transition-colors focus:outline-none">
+              Share Article
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+          <div class="mb-6 text-center">
+            <span class="tracking-widest text-xs title-font font-semibold text-indigo-500 uppercase bg-indigo-50 px-3 py-1 rounded-full">Reflections</span>
+            <h1 class="title-font sm:text-3xl text-2xl font-bold text-gray-900 mt-4 mb-2">The Unscripted Journey</h1>
+            <p class="text-xs text-gray-400">Published on October 19, 2026 • 2 min read</p>
+          </div>
+          <p class="leading-relaxed text-base md:text-lg text-gray-700 text-justify mb-8">Not everything we yearn for unfolds as envisioned. Even after securing our long-sought desires, the fulfillment often pales in comparison to the anticipation. We tend to overlook a fundamental reality: the stark contrast between our imagined journey and the one we actually traverse. While the mental blueprint appears flawless, reality rarely aligns with perfection. Yet, an unscripted journey is not inherently flawed—in fact, its unexpected detours hold far greater intrinsic value than any idealized fantasy. Ultimately, while our thirst for wisdom aims for the expanse of the Milky Way, our actual progress resembles a tortoise navigating a bicycle—gradual, awkward, yet undeniably moving forward.
+        </p>
+          <div class="flex items-center justify-between border-t border-gray-100 pt-6 text-sm text-gray-400">
+            <button onclick="likeArticle(this)" class="inline-flex items-center hover:text-indigo-600 transition-colors focus:outline-none">
+              <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              <span>Likes: <strong class="like-count">1200</strong></span>
+            </button>
+            <button onclick="shareArticle()" class="text-indigo-500 hover:text-indigo-700 font-medium text-sm transition-colors focus:outline-none">
+              Share Article
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3. ABOUT SECTION -->
+    <section id="tab-about" class="tab-content bg-white py-16 hidden">
+      <div class="container px-5 mx-auto max-w-3xl">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-4 sm:space-y-0 sm:space-x-6">
+          <div class="w-20 h-20 rounded-full bg-indigo-100 text-indigo-500 flex items-center justify-center font-bold text-2xl flex-shrink-0">
+            UL
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-900">About unscriptedlife</h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              Navigating life, growth, and unexpected detours. Exploring thoughts on wisdom, personal engineering, and the subtle art of embracing the unplanned.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SUBSCRIBE SECTION -->
+    <section id="tab-subscribe" class="tab-content py-16 hidden">
+      <div class="container px-5 mx-auto max-w-xl text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Subscribe to unscriptedlife</h2>
+        <p class="text-gray-600 text-sm mb-6">Get weekly reflections delivered straight to your inbox.</p>
+        <form onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row justify-center gap-2">
+          <input type="email" id="email-input" placeholder="Enter your email" required class="bg-white border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-indigo-500 text-gray-900 flex-grow text-sm">
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded text-sm transition-colors">
+            Subscribe
+          </button>
+        </form>
+        <div id="subscribe-msg" class="hidden mt-4 text-green-600 font-medium text-sm">
+          ✓ Thank you for subscribing to unscriptedlife!
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-gray-600 body-font border-t border-gray-100 mt-auto">
+    <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+      <span class="text-lg font-bold text-gray-900">unscriptedlife</span>
+      <p class="text-xs text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        © 2026 unscriptedlife — All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Interactivity -->
+  <script>
+    // Tab switching functionality
+    function showTab(tabName) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.add('hidden'));
+      document.getElementById('tab-' + tabName).classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Interactive Like button
+    function likeArticle(btn) {
+      const countSpan = btn.querySelector('.like-count');
+      let currentLikes = parseInt(countSpan.innerText);
+      countSpan.innerText = currentLikes + 1;
+      btn.classList.add('text-indigo-600');
+    }
+
+    // Share button
+    function shareArticle() {
+      navigator.clipboard.writeText(window.location.href);
+      alert('Article link copied to clipboard!');
+    }
+
+    // Subscription form handling
+    function handleSubscribe(event) {
+      event.preventDefault();
+      document.getElementById('subscribe-msg').classList.remove('hidden');
+      document.getElementById('email-input').value = '';
+    }
+  </script>
+
+</body>
+</html>
