@@ -153,17 +153,16 @@
     </div>
 
     <!-- Footer -->
-    <div class="flex items-center justify-between border-t border-gray-200 pt-5 mt-8 text-sm text-gray-500">
-        <button onclick="likeArticle('inner-game-tennis')" class="flex items-center space-x-2 hover:text-rose-500 transition">
-            <span>♡</span>
-            <span>Likes:</span>
-            <span id="like-count-inner-game-tennis" class="font-medium text-gray-700">7007</span>
-        </button>
-        <button type="button" class="text-indigo-600 hover:underline font-medium">
-            Share Article
-        </button>
-    </div>
-</article>
+    <div class="flex items-center justify-between border-t border-gray-100 pt-6 text-sm text-gray-400 mt-8">
+            <button onclick="likeArticle(this)" class="inline-flex items-center hover:text-indigo-600 transition-colors focus:outline-none">
+              <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              <span>Likes: <strong class="like-count">7077</strong></span>
+            </button>
+            <button onclick="shareArticle()" class="text-indigo-500 hover:text-indigo-700 font-medium text-sm transition-colors focus:outline-none">
+              Share Article
+            </button>
+          </div>
+        </article>
 
 
         <!-- ARTICLE 1: The Illusion of Control -->
